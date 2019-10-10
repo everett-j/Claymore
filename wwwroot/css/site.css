@@ -5,6 +5,10 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  color: #e80808;
+}
+.navbar-brand{
+  color: #e80808;
 }
 
 /* Sticky footer styles
@@ -58,8 +62,13 @@ body {
 .logo_title{
   font-family: 'Orbitron', sans-serif;
   font-size: 25px;
+  color: #e80808;
 }
 
 .posting_title{
-  color:#2c2c80;
+  color:#334236;
+}
+
+.navbar-brand{
+  color: #e80808
 }
