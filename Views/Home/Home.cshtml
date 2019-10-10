@@ -1,0 +1,49 @@
+@using Claymore.Controllers
+
+
+<div id="nav">
+    
+    <h5>Welcome, @ViewBag.user.FirstName</h5>
+    <p><br></p>
+</div>
+
+
+<table class="table table-striped">
+
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date Applied</th>
+      <th scope="col">Company Name</th>
+      <th scope="col">Position</th>
+      <th scope="col">Phone Screen</th>
+      <th scope="col">Phone Interview</th>
+      <th scope="col">Interview</th>
+      <th scope="col">Mark Denied</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+      @{
+          foreach (var posting in @ViewBag.AA)
+          {
+
+              <tr>
+                <td> @posting.DateApply.ToString("MM/dd") </td>
+                <td> <a href= "/posting/@posting.PostingId">@posting.Company</a></td>
+                <td>@posting.PositionTitle</td>
+                <td> @posting.PhoneScreen.ToString("MM/dd") </td>
+                <td> @posting.PhoneInterview.ToString("MM/dd") </td>
+                <td> @posting.Interview.ToString("MM/dd")</td>
+                <td> @posting.Denied.ToString("MM/dd")</td>
+                <td><a href= "/edit/@posting.PostingId" class="btn btn-outline-info btn-sm " role="button" aria-disabled="true">Edit</a> | <a href= "/Delete/@posting.PostingId"class="btn btn-outline-danger btn-sm " role="button" aria-disabled="true">Delete</a></td>
+                
+              </tr>
+          }
+      }
+     
+  </tbody>
+</table>
+
+<button><a href="/AddPosting">Add a New Posting</a></button>

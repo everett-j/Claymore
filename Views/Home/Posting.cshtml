@@ -1,0 +1,85 @@
+<div id="nav">
+    <p><BR></p>
+
+</div>
+
+
+
+
+<!--BEGIN of CARD ROW-->
+<div class="row">
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+    <div class="card-header"><h5 class="card-title">Job Details</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Company:</b> @ViewBag.Posting.Company</p>
+        <p class="card-text"><b class="posting_title">Date Applied:</b> @ViewBag.Posting.DateApply</p>
+        <p class="card-text"><b class="posting_title">Job Link:</b> <a style="color: black" href=" @ViewBag.posting.JobLink">@ViewBag.posting.JobLink</a></p>
+        <p class="card-text"><b class="posting_title">Job Posting:</b> @ViewBag.posting.JobPosting</p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+     <div class="card-header"><h5 class="card-title">Key Info</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Position Title: </b>@ViewBag.posting.PositionTitle</p>
+        <p class="card-text"><b class="posting_title">Recruiter Name:</b> @ViewBag.posting.RecruiterName</p>
+        <p class="card-text"><b class="posting_title">Contact Name:</b> @ViewBag.posting.ContactName</p>
+        <p class="card-text"><b class="posting_title">Notes:</b> @ViewBag.posting.Notes</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END of CARD ROW-->
+
+<!--BEGIN of CARD ROW 2-->
+<div class="row">
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+    <div class="card-header"><h5 class="card-title">Phone Screen</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Phone Screen:</b> @ViewBag.posting.PhoneScreen</p>
+        <p class="card-text"><b class="posting_title">Phone Screen Notes:</b> @ViewBag.posting.ScreenNotes</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+     <div class="card-header"><h5 class="card-title">Phone Interview</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Phone Interview:</b> @ViewBag.posting.PhoneInterview</p>
+        <p class="card-text"><b class="posting_title">Phone Interview Notes:</b> @ViewBag.posting.PhoneNotes</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--END of CARD ROW 2-->
+
+<!--BEGIN of CARD ROW 3-->
+<div class="row">
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+    <div class="card-header"><h5 class="card-title">Interview Info</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Interview:</b> @ViewBag.posting.Interview</p>
+        <p class="card-text"><b class="posting_title">Interview Notes:</b> @ViewBag.posting.InterviewNotes</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 ">
+    <div class="card text-white bg-secondary mb-3">
+     <div class="card-header"><h5 class="card-title">Denied Info</h5></div>
+      <div class="card-body ">
+        <p class="card-text"><b class="posting_title">Denied:</b> @ViewBag.posting.Denied</p>
+        <p class="card-text"><b class="posting_title">Denied Notes:</b> @ViewBag.posting.DeniedNotes</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--END of CARD ROW 3-->

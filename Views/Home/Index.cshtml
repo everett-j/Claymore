@@ -1,0 +1,56 @@
+﻿@model User
+<link rel="stylesheet" href="~/css/site.css">
+<h1>Welcome to Claymore</h1>
+
+<div id="main">
+<div id="Login">
+    <h3>Login an Existing User</h3>
+<form asp-action="LoginUser" asp-controller="Home" method="post">
+<p>Email <input type="email" name="Email"></p>
+<p>Password <input type="password" name="Password"></p>
+<input class="submit" type="submit" value="Login">
+
+</form>
+<p class="error">@ViewBag.Login</p>
+<p class="error">@ViewBag.NoUser</p>
+<p class="error">@ViewBag.BadInfo</p>
+
+</div>
+
+
+
+
+
+<div id="Reg">
+    <h3>Register a New User</h3>
+<form asp-action="RegisterUser" asp-controller="Home" method="post">
+
+<p>First Name <input type="text"asp-for="FirstName"></p>
+<span asp-validation-for="FirstName"></span>
+
+<p>Last Name <input type="text"asp-for="LastName"></p>
+<span asp-validation-for="LastName"></span>
+
+<p>Email <input type="email"asp-for="Email"></p>
+<span asp-validation-for="Email"></span>
+
+<p>Password <input type="password"asp-for="Password"></p>
+<span asp-validation-for="Password"></span>
+
+
+<p>Confirm Password <input type="password" asp-for="PasswordConfirmation"></p>
+<span asp-validation-for="PasswordConfirmation"></span>
+
+<input class="submit" type="submit" value="Register">
+
+
+</form>
+
+<p class="error">@ViewBag.FName</p>
+<p class="error">@ViewBag.LName</p>
+<p class="error">@ViewBag.Password</p>
+<p class="error">@ViewBag.PConfirm</p>
+<p class="error">@ViewBag.ExistingUser</p>
+</div>
+
+</div>

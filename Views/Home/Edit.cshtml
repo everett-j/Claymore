@@ -1,0 +1,58 @@
+@model PostingEvent
+
+
+<div id="nav">
+    <h1>Claymore</h1>
+    <a href="/Home">Home</a>
+    <a href="/logout">Log Off</a>
+</div>
+<h1>Edit Your Posting for @ViewBag.Company</h1>
+<form asp-action="Edit" asp-controller="Home" method="post">
+
+    <span asp-validation-for="Company"></span>
+    <h3>Company<input asp-for="Company"></h3>
+
+    <h3>Job Link: <input asp-for="JobLink"></h3>
+
+        <span asp-validation-for="DateApply"></span>
+    <h3>Date Applied: <input type ="date" asp-for="DateApply"></h3>
+
+    <h3>Position Title: <input asp-for="PositionTitle"></h3>
+
+        <span asp-validation-for="JobPosting"></span>
+    <h3>
+        Job Posting: <input asp-for="JobPosting"> <select asp-for="JobPosting">
+        <option>Company Site</option>
+        <option>Glassdoor</option>
+        <option>Indeed</option>
+        <option>LinkedIn</option>
+    </select>
+    </h3>
+
+        <span asp-validation-for="Notes"></span>
+    <h3>Notes: </h3>
+    <textarea asp-for="Notes"></textarea>
+
+    <h3>Recruiter Name: <input asp-for="RecruiterName"></h3>
+
+    <h3>Contact Name: <input asp-for="ContactName"></h3>
+
+    <h3>Phone Screen: <input type ="date" asp-for="PhoneScreen"></h3>
+    <h3>Phone Screen Notes: </h3>
+    <textarea asp-for="ScreenNotes"></textarea>
+
+    <h3>Phone Interview: <input type ="date" asp-for="PhoneInterview"></h3>
+    <h3>Phone Screen Notes: </h3>
+    <textarea asp-for="PhoneNotes"></textarea>
+
+    <h3>Interview: <input type ="date" asp-for="Interview"></h3>
+    <h3>Interview Notes: </h3>
+    <textarea asp-for="InterviewNotes"></textarea>
+
+    <h3>Denied: <input type ="date" asp-for="Denied"></h3>
+    <h3>Denied Notes: </h3>
+    <textarea asp-for="DeniedNotes"></textarea>
+
+
+    <input type="submit" value="Create Posting">
+</form>
