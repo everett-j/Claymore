@@ -30,6 +30,11 @@ namespace Claymore.Controllers
             ViewBag.NoUser = TempData["NoUser"];
             ViewBag.BadInfo = TempData["IncorrectInfo"];
             ViewBag.ExistingUser = TempData["ExistingUser"];
+
+//Display Active Users
+        int UsersCount = _context.Users.ToList().Count();
+        ViewBag.UsersCount = UsersCount;
+
             return View();
         }
 
@@ -70,6 +75,12 @@ namespace Claymore.Controllers
                         TempData[key] = EM;
                     }
                 }
+
+//Display Active Users
+        int UsersCount = _context.Users.ToList().Count();
+        ViewBag.UsersCount = UsersCount;
+
+
 
                 return RedirectToAction("Index");
             }
@@ -130,10 +141,9 @@ namespace Claymore.Controllers
             ViewBag.JobCount = JobCount;
 
             //INSERT LAST JOB APPLIED HERE
-            var LastApplied = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList().Last().DateApply;
-            ViewBag.LastApplied = LastApplied;
-            
-            //INSERT ALL FOLLOW-UPS FOR FALSE HERE
+           
+
+           //INSERT ALL FOLLOW-UPS FOR FALSE HERE
 
 
             

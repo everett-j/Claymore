@@ -18,42 +18,43 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Orbitron|Special+Elite&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="http://www.josheverett.info/assets/img/josheverett-icon.png" />
-<meta name="description" content="This beautiful site is a companion to the job and career seeker. Easy ability to track all jobs applied to and follow through the entire hiring process. Built by  Joshua Everett, a Computer Software Engineering graduate with intensive training in software development. Well-versed in Python, C#/.Net, JavaScript, MongoDB, Django and MySQL. Military veteran with strong ability to manage projects from concept to completion ensuring on-time, on-budget, and on-target results. Equally adept at working with teams and individually with minimal supervision.  " />
+<meta name="description" content="You’ve found us! This awesome site is your ultimate companion when finding your next career path. 
+    Enter your job application info and track the entire hiring process, from the application to the final interview, 
+    we’ve got you. Don’t settle. Dream Bigger.  " />
 <meta name="keywords" content="job hiring tracking, application tracking system, career tracking, AI, artifical Intelligence, software engineering, software, developer, full-stack, fullstack, python, ajax, java, mean, C#, maryland, lexington park, PAX, 919-588-0090, Joshua Everett" />
 </head>
 <body>
     <header>
     <!--BEGIN NAV-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <image class="nav_gnome" src="/images/nerdgnome.png"><a class="navbar-brand logo_title" href="#">nerdGnome</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Home">Dashboard </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " asp-area="" asp-controller="Home" asp-action="AddPosting">Add New</a>
-      </li>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <image class="nav_gnome" src="/images/nerdgnome.png"><a class="navbar-brand logo_title" asp-controller="Home" asp-action="Home">nerdGnome</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Home">Dashboard </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " asp-area="" asp-controller="Home" asp-action="AddPosting">Add New</a>
+              </li>
       
-    </ul>
-    <span class="navbar-text">
-      Dream bigger. | 
-    </span>
-  </div>
-</nav>
+            </ul>
+            <span class="navbar-text">
+              Dream bigger. | 
+            </span>
+          </div>
+      </nav>
 
 <!-- <a href="/logout">Log Off</a> -->
     <!--END NAV-->
         
     </header>
     <div class="container">
-       
-        <main role="main" class="pb-3">
+      <main role="main" class="pb-3">
             @RenderBody()
-        </main>
+      </main>
     </div>
 
     <footer class="border-top footer text-muted">

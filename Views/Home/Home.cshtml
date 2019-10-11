@@ -7,7 +7,8 @@
     <p><br></p>
 </div>
 <!--BEGIN STATS AREA-->
-<div class="row">
+<!--FUTURE-->   
+<!-- <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-header card-home">
@@ -16,18 +17,19 @@
           <span class="navbar-toggler-icon"></span></button><h5 class="card-title">Your Job Stats</h5>
       </div>
       <div class="card-body collapse" id="collapseStats">
-        <p class="card-text"><b class="posting_title">Last Application Entered On: </b> @ViewBag.LastApplied.ToString("MM/dd") </p>
-        <p class="card-text"><b class="posting_title">Total Jobs Applied To: </b> @ViewBag.JobCount </p>
+        <p class="card-text"><b class="posting_title">Last Application Entered On: </b>  </p>
+        <p class="card-text"><b class="posting_title">Total Jobs Applied To: </b> @ViewBag.JobCount </p> -->
+<!--FUTURE-->       
         <!-- <p class="card-text"><b class="posting_title">Total Phone Screens: </b> No Data </p>
         <p class="card-text"><b class="posting_title">Total Phone Interviews: </b> No Data </p>
         <p class="card-text"><b class="posting_title">Total Interviews: </b> No Data </p>
         <p class="card-text"><b class="posting_title">Total Denied: </b> No Data </p> -->
-      </div>
-        </nav>
-    </div>
+      <!-- </div>
+    </nav>
   </div>
-
-<!-- <div class="col-sm-6">
+</div> -->
+<!--FUTURE-->  
+  <!-- <div class="col-sm-6">
     <div class="card">
       <div class="card-header card-home">
         <nav class="navbar navbar-dark bg-dark">
@@ -38,21 +40,14 @@
         <p class="card-text"><b class="posting_title">Percent to Phone Screen: </b> No Data </p>
         <p class="card-text"><b class="posting_title">Percent to Phone Interview: </b> No Data </p>
         <p class="card-text"><b class="posting_title">Percent to Interview: </b> No Data </p>
-        
-
-      </div>
-        </nav>
     </div>
-  </div> -->
+    </nav>
   </div>
-
-
+</div> -->
+<!-- </div> -->
 <p><br></p>
-
 <!--END STATS AREA-->
-
 <table class="table table-striped table-hover">
-
   <thead class="thead-dark">
     <tr>
       <th scope="col">Date Applied</th>
@@ -65,8 +60,6 @@
       <th scope="col">Options</th>
     </tr>
   </thead>
-
-
   <tbody>
       @{
           foreach (var posting in @ViewBag.AA)

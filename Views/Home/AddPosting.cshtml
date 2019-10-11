@@ -12,42 +12,41 @@
 <div class="row">
   <div class="col-sm-6 ">
     <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Job Details</h5></div>
-      <div class="card-body ">
-      <!--Company-->
+      <div class="card-header"><h5 class="card-title">Job Details</h5></div>
+        <div class="card-body ">
+<!--Company-->
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label posting_title ">Company</label>
+            <div class="col-sm-10">
+              <input class="form-control w-75" asp-for="Company">
+            </div>
+          </div>
+<!--DateApply-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Company</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" asp-for="Company">
+          <label class="col-sm-2 col-form-label posting_title ">Date Applied</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" type ="date" asp-for="DateApply">
+          </div>
         </div>
-        </div>
-        <!--DateApply-->
+<!--JobLink-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Date Applied</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" type ="date" asp-for="DateApply">
+          <label class="col-sm-2 col-form-label posting_title ">Job Link</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" asp-for="JobLink">
+          </div>
         </div>
-        </div>
-        <!--JobLink-->
+<!--JobLink-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Job Link</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" asp-for="JobLink">
+          <label class="col-sm-2 col-form-label posting_title ">Job Posting</label>
+          <div class="col-sm-10">
+            <select class="form-control w-75" asp-for="JobPosting">
+              <option>Company Site</option>
+              <option>Glassdoor</option>
+              <option>Indeed</option>
+              <option>LinkedIn</option>
+            </select>
+          </div>
         </div>
-        </div>
-        <!--JobLink-->
-        <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Job Posting</label>
-        <div class="col-sm-10">
-        <select class="form-control w-75" asp-for="JobPosting">
-        <option>Company Site</option>
-        <option>Glassdoor</option>
-        <option>Indeed</option>
-        <option>LinkedIn</option>
-        </select>
-        </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -55,33 +54,33 @@
     <div class="card text-white bg-secondary mb-3">
      <div class="card-header"><h5 class="card-title">Key Info</h5></div>
       <div class="card-body ">
-        <!--Position Title-->
+<!--Position Title-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Position Title</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" asp-for="PositionTitle">
+          <label class="col-sm-2 col-form-label posting_title ">Position Title</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" asp-for="PositionTitle">
+          </div>
         </div>
-        </div>
-        <!--Recruiter Name-->
+<!--Recruiter Name-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Recruiter Name</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" asp-for="RecruiterName">
+          <label class="col-sm-2 col-form-label posting_title ">Recruiter Name</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" asp-for="RecruiterName">
+          </div>
         </div>
-        </div>
-        <!--Contact Name-->
+<!--Contact Name-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Contact Name</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" asp-for="ContactName">
+          <label class="col-sm-2 col-form-label posting_title ">Contact Name</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" asp-for="ContactName">
+          </div>
         </div>
-        </div>
-        <!--Job Notes-->
+<!--Job Notes-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Job Notes</label>
-        <div class="col-sm-10">
-        <textarea class="form-control w-75" asp-for="Notes"></textarea>
-        </div>
+          <label class="col-sm-2 col-form-label posting_title ">Job Notes</label>
+          <div class="col-sm-10">
+            <textarea class="form-control w-75" asp-for="Notes"></textarea>
+          </div>
         </div>
       </div>
     </div>
@@ -92,23 +91,22 @@
 <div class="row">
   <div class="col-sm-6 ">
     <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Phone Screen</h5></div>
+      <div class="card-header"><h5 class="card-title">Phone Screen</h5></div>
       <div class="card-body ">
-        <!--Phone Screen-->
+<!--Phone Screen-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Phone Screen</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" type ="date" asp-for="PhoneScreen">
+          <label class="col-sm-2 col-form-label posting_title ">Phone Screen</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" type ="date" asp-for="PhoneScreen">
+          </div>
         </div>
-        </div>
-        <!--Phone Screen Notes-->
+<!--Phone Screen Notes-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Phone Screen Notes</label>
-        <div class="col-sm-10">
-        <textarea class="form-control w-75" asp-for="ScreenNotes"></textarea>
+          <label class="col-sm-2 col-form-label posting_title ">Phone Screen Notes</label>
+          <div class="col-sm-10">
+            <textarea class="form-control w-75" asp-for="ScreenNotes"></textarea>
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -116,21 +114,20 @@
     <div class="card text-white bg-secondary mb-3">
      <div class="card-header"><h5 class="card-title">Phone Interview</h5></div>
       <div class="card-body ">
-        <!--Phone Interview-->
+<!--Phone Interview-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Phone Interview</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" type ="date" asp-for="PhoneInterview">
+          <label class="col-sm-2 col-form-label posting_title ">Phone Interview</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" type ="date" asp-for="PhoneInterview">
+          </div>
         </div>
-        </div>
-        <!--Phone Interview Notes-->
+<!--Phone Interview Notes-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Phone Interview Notes</label>
-        <div class="col-sm-10">
-        <textarea class="form-control w-75" asp-for="PhoneNotes"></textarea>
+          <label class="col-sm-2 col-form-label posting_title ">Phone Interview Notes</label>
+          <div class="col-sm-10">
+            <textarea class="form-control w-75" asp-for="PhoneNotes"></textarea>
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -140,23 +137,22 @@
 <div class="row">
   <div class="col-sm-6 ">
     <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Interview Info</h5></div>
+      <div class="card-header"><h5 class="card-title">Interview Info</h5></div>
       <div class="card-body ">
-        <!--Phone Interview-->
+<!--Phone Interview-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Interview</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" type ="date" asp-for="Interview">
+          <label class="col-sm-2 col-form-label posting_title ">Interview</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" type ="date" asp-for="Interview">
+          </div>
         </div>
-        </div>
-        <!--Phone Interview Notes-->
+<!--Phone Interview Notes-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Interview Notes</label>
-        <div class="col-sm-10">
-        <textarea class="form-control w-75" asp-for="InterviewNotes"></textarea>
+          <label class="col-sm-2 col-form-label posting_title ">Interview Notes</label>
+          <div class="col-sm-10">
+            <textarea class="form-control w-75" asp-for="InterviewNotes"></textarea>
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -164,28 +160,25 @@
     <div class="card text-white bg-secondary mb-3">
      <div class="card-header"><h5 class="card-title">Denied Info</h5></div>
       <div class="card-body ">
-        <!--Denied-->
+<!--Denied-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Denied</label>
-        <div class="col-sm-10">
-        <input class="form-control w-75" type ="date" asp-for="Denied">
+          <label class="col-sm-2 col-form-label posting_title ">Denied</label>
+          <div class="col-sm-10">
+            <input class="form-control w-75" type ="date" asp-for="Denied">
+          </div>
         </div>
-        </div>
-        <!--Denied Notes-->
+<!--Denied Notes-->
         <div class="form-group row">
-        <label class="col-sm-2 col-form-label posting_title ">Denied Notes</label>
-        <div class="col-sm-10">
-        <textarea class="form-control w-75" asp-for="DeniedNotes"></textarea>
+          <label class="col-sm-2 col-form-label posting_title ">Denied Notes</label>
+          <div class="col-sm-10">
+            <textarea class="form-control w-75" asp-for="DeniedNotes"></textarea>
+          </div>
         </div>
-        </div>
-
       </div>
     </div>
   </div>
 </div>
 <!--END of CARD ROW 3-->
 
-
-
-    <input type="submit" class="btn btn-success" value="Create Posting">
+<input type="submit" class="btn btn-success" value="Create Posting">
 </form>
