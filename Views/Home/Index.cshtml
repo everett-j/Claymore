@@ -1,56 +1,120 @@
 ﻿@model User
 <link rel="stylesheet" href="~/css/site.css">
-<h1>Welcome to Claymore</h1>
-
+<!-- <h1>Welcome to nerdGnome.com</h1> -->
+<p><br></p>
 <div id="main">
-<div id="Login">
-    <h3>Login an Existing User</h3>
-<form asp-action="LoginUser" asp-controller="Home" method="post">
-<p>Email <input type="email" name="Email"></p>
-<p>Password <input type="password" name="Password"></p>
-<input class="submit" type="submit" value="Login">
+<!--BEGIN HEADER-->
+<div class="card">
+  <div class="card-header text-white bg-dark"><h5 class="card-title">Welcome to nerdGnome.com</h5></div>
+  <div class="card-body">
+    <h5 class="card-title">Dream Bigger.</h5>
+    <p class="card-text">This awesome site is a companion to the new job and career seeker. 
+    It gives you the easy ability to track all jobs you have applied through 
+    the entire hiring process. From the first application submitted to the final interview, we got you. Don't Settle, Dream Bigger.</p>
+    </div>
+</div>
 
-</form>
-<p class="error">@ViewBag.Login</p>
-<p class="error">@ViewBag.NoUser</p>
-<p class="error">@ViewBag.BadInfo</p>
+<!--END FOOTER-->
+<p><br></p>
+<!--BEGIN CARDS-->
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card bg-light border-dark mb-3">
+    <div class="card-header text-white bg-dark"><h5 class="card-title">Login Here.</h5></div>
+      <div class="card-body">
+        <form class="form-horizontal" asp-action="LoginUser" asp-controller="Home" method="post">
+        <!--EMAIL-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label" for="Email">Email</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="email" name="Email">
+        </div>
+        </div>
+        <!--PW-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label" for="Password">Password</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="password" name="Password">
+        </div>
+        </div>
 
+        <input class="submit btn btn-success" type="submit" value="Login">
+
+        </form>
+        <p class="error">@ViewBag.Login</p>
+        <p class="error">@ViewBag.NoUser</p>
+        <p class="error">@ViewBag.BadInfo</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card bg-light border-dark mb-3">
+    <div class="card-header text-white bg-dark"><h5 class="card-title">New? Register Here.</h5></div>
+      <div class="card-body">
+        <form asp-action="RegisterUser" asp-controller="Home" method="post">
+            <p class="error">@ViewBag.ExistingUser</p>
+
+        <!--First Name-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label">First Name</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="text"asp-for="FirstName">
+                    <span asp-validation-for="FirstName"></span>
+                    <p class="error">@ViewBag.FName</p>
+        </div>
+        </div>
+        <!-- -->
+        <!--Last Name-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label">Last Name</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="text"asp-for="LastName">
+                    <span asp-validation-for="LastName"></span>
+                    <p class="error">@ViewBag.LName</p>
+        </div>
+        </div>
+        <!-- -->
+        <!--Email-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label">Email</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="email"asp-for="Email">
+                    <span asp-validation-for="Email"></span>
+        </div>
+        </div>
+        <!-- -->
+        <!--Password-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label">Password</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="password"asp-for="Password">
+                    <span asp-validation-for="Password"></span>
+                    <p class="error">@ViewBag.Password</p>
+        </div>
+        </div>
+        <!-- -->
+        <!--Password Confirmation-->
+        <div class="form-group row">
+        <label class="col-sm-2 col-form-label in_label">Confirm Password</label>
+        <div class="col-sm-10">
+        <input class="form-control w-75" type="password"asp-for="PasswordConfirmation">
+                    <span asp-validation-for="PasswordConfirmation"></span>
+                    <p class="error">@ViewBag.PConfirm</p>
+        </div>
+        </div>
+        <!-- -->
+
+
+            <input class="submit btn btn-success" type="submit" value="Register">
+
+            </form>
+      </div>
+    </div>
+  </div>
 </div>
 
 
+<!--END CARDS -->
 
-
-
-<div id="Reg">
-    <h3>Register a New User</h3>
-<form asp-action="RegisterUser" asp-controller="Home" method="post">
-
-<p>First Name <input type="text"asp-for="FirstName"></p>
-<span asp-validation-for="FirstName"></span>
-
-<p>Last Name <input type="text"asp-for="LastName"></p>
-<span asp-validation-for="LastName"></span>
-
-<p>Email <input type="email"asp-for="Email"></p>
-<span asp-validation-for="Email"></span>
-
-<p>Password <input type="password"asp-for="Password"></p>
-<span asp-validation-for="Password"></span>
-
-
-<p>Confirm Password <input type="password" asp-for="PasswordConfirmation"></p>
-<span asp-validation-for="PasswordConfirmation"></span>
-
-<input class="submit" type="submit" value="Register">
-
-
-</form>
-
-<p class="error">@ViewBag.FName</p>
-<p class="error">@ViewBag.LName</p>
-<p class="error">@ViewBag.Password</p>
-<p class="error">@ViewBag.PConfirm</p>
-<p class="error">@ViewBag.ExistingUser</p>
-</div>
 
 </div>

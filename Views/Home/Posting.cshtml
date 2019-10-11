@@ -16,7 +16,20 @@
         <p class="card-text"><b class="posting_title">Date Applied:</b> @ViewBag.Posting.DateApply</p>
         <p class="card-text"><b class="posting_title">Job Link:</b> <a style="color: black" href=" @ViewBag.posting.JobLink">@ViewBag.posting.JobLink</a></p>
         <p class="card-text"><b class="posting_title">Job Posting:</b> @ViewBag.posting.JobPosting</p>
-        
+       
+     <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.ConfirmationEmail == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Received Confirmation Email </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->  
       </div>
     </div>
   </div>
@@ -40,8 +53,61 @@
     <div class="card text-white bg-secondary mb-3">
     <div class="card-header"><h5 class="card-title">Phone Screen</h5></div>
       <div class="card-body ">
-        <p class="card-text"><b class="posting_title">Phone Screen:</b> @ViewBag.posting.PhoneScreen</p>
+      <!--BEGIN DATE CONTROL-->
+      <p class="card-text"><b class="posting_title">Phone Screen: </b>@if (@ViewBag.posting.PhoneScreen == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
+            {
+                @("--");
+            }
+            else
+            {
+                @ViewBag.posting.PhoneScreen.ToString("MM/dd")
+            }
+            </p>
+
+      <!--END DATE CONTROL-->
+
         <p class="card-text"><b class="posting_title">Phone Screen Notes:</b> @ViewBag.posting.ScreenNotes</p>
+
+
+     <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.ScreenEmail == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Email Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+    <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.ScreenLetter == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Letter Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+      <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.ScreenCall == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Call Made </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
 
       </div>
     </div>
@@ -50,8 +116,60 @@
     <div class="card text-white bg-secondary mb-3">
      <div class="card-header"><h5 class="card-title">Phone Interview</h5></div>
       <div class="card-body ">
-        <p class="card-text"><b class="posting_title">Phone Interview:</b> @ViewBag.posting.PhoneInterview</p>
+      <!--BEGIN DATE CONTROL-->
+      <p class="card-text"><b class="posting_title">Phone Interview: </b>@if (@ViewBag.posting.PhoneInterview == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
+            {
+                @("--");
+            }
+            else
+            {
+                @ViewBag.posting.PhoneInterview.ToString("MM/dd")
+            }
+            </p>
+
+      <!--END DATE CONTROL-->
+
         <p class="card-text"><b class="posting_title">Phone Interview Notes:</b> @ViewBag.posting.PhoneNotes</p>
+      
+<!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.PhoneEmail == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Email Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+    <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.PhoneLetter == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Letter Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+      <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.PhoneCall == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Call Made </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->
 
       </div>
     </div>
@@ -65,8 +183,60 @@
     <div class="card text-white bg-secondary mb-3">
     <div class="card-header"><h5 class="card-title">Interview Info</h5></div>
       <div class="card-body ">
-        <p class="card-text"><b class="posting_title">Interview:</b> @ViewBag.posting.Interview</p>
+      <!--BEGIN DATE CONTROL-->
+      <p class="card-text"><b class="posting_title">Interview: </b>@if (@ViewBag.posting.Interview == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
+            {
+                @("--");
+            }
+            else
+            {
+                @ViewBag.posting.Interview.ToString("MM/dd")
+            }
+            </p>
+
+      <!--END DATE CONTROL-->
+
         <p class="card-text"><b class="posting_title">Interview Notes:</b> @ViewBag.posting.InterviewNotes</p>
+
+<!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.InterviewEmail == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Email Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+    <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.InterviewLetter == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Letter Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+      <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.InterviewCall == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Call Made </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->
 
       </div>
     </div>
@@ -75,8 +245,60 @@
     <div class="card text-white bg-secondary mb-3">
      <div class="card-header"><h5 class="card-title">Denied Info</h5></div>
       <div class="card-body ">
-        <p class="card-text"><b class="posting_title">Denied:</b> @ViewBag.posting.Denied</p>
+      <!--BEGIN DATE CONTROL-->
+      <p class="card-text"><b class="posting_title">Denied: </b>@if (@ViewBag.posting.Denied == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
+            {
+                @("--");
+            }
+            else
+            {
+                @ViewBag.posting.Denied.ToString("MM/dd")
+            }
+            </p>
+
+      <!--END DATE CONTROL-->
+
         <p class="card-text"><b class="posting_title">Denied Notes:</b> @ViewBag.posting.DeniedNotes</p>
+
+<!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.DeniedEmail == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Email Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+    <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.DeniedLetter == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Letter Sent </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->   
+      <!--BEGIN TRUE FALSE CONTROL-->
+     @{
+      <p class="card-text">@if (@ViewBag.posting.DeniedCall == true)
+            {
+                @("\uD83D\uDC4D");
+            }
+            else
+            {
+                @("\uD83D\uDC4E");
+            }
+            <b class="posting_title">Follow-up Call Made </b></p>
+     }
+      <!--END TRUE FALSE CONTROL-->
 
       </div>
     </div>

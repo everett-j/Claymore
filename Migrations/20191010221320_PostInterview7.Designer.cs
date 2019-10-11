@@ -3,14 +3,16 @@ using System;
 using Claymore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Claymore.Migrations
 {
     [DbContext(typeof(YourContext))]
-    partial class YourContextModelSnapshot : ModelSnapshot
+    [Migration("20191010221320_PostInterview7")]
+    partial class PostInterview7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

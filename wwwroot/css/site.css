@@ -67,8 +67,45 @@ body {
 
 .posting_title{
   color:#334236;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .navbar-brand{
   color: #e80808
+}
+
+.check_space{
+  padding-left: 10px;
+}
+
+.card-text {
+  margin-left: 10px;
+}
+
+.error{
+  color: #e80808;
+}
+
+.card-header{
+  background-color: darkolivegreen;
+}
+
+.card-home{
+  background-color: #343a40;
+  color: white
+}
+
+.in_label{
+  font-size: 12px;
+}
+
+.nav_gnome {
+  width: 38px;
+}
+
+.footer_title{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  color: #030303;
 }

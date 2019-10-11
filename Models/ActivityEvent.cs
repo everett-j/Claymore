@@ -59,6 +59,21 @@ namespace Claymore.Models
             Guests = new List<Guest>();
         }
         
+        public bool ScreenEmail {get;set;}
+        public bool ScreenLetter {get;set;}
+        public bool ScreenCall {get;set;}
+        public bool PhoneEmail {get;set;}
+        public bool PhoneLetter {get;set;}
+        public bool PhoneCall {get;set;}
+        public bool InterviewEmail {get;set;}
+        public bool InterviewLetter {get;set;}
+        public bool InterviewCall {get;set;}
+        public bool DeniedEmail {get;set;}
+        public bool DeniedLetter {get;set;}
+        public bool DeniedCall {get;set;}
+         public bool ConfirmationEmail {get;set;}
+
+
 
     }
 }

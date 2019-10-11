@@ -3,14 +3,16 @@ using System;
 using Claymore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Claymore.Migrations
 {
     [DbContext(typeof(YourContext))]
-    partial class YourContextModelSnapshot : ModelSnapshot
+    [Migration("20191010184857_PostInterview")]
+    partial class PostInterview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,8 +44,6 @@ namespace Claymore.Migrations
 
                     b.Property<string>("Company");
 
-                    b.Property<bool>("ConfirmationEmail");
-
                     b.Property<string>("ContactName");
 
                     b.Property<DateTime>("CreatedAt");
@@ -54,21 +54,9 @@ namespace Claymore.Migrations
 
                     b.Property<DateTime>("Denied");
 
-                    b.Property<bool>("DeniedCall");
-
-                    b.Property<bool>("DeniedEmail");
-
-                    b.Property<bool>("DeniedLetter");
-
                     b.Property<string>("DeniedNotes");
 
                     b.Property<DateTime>("Interview");
-
-                    b.Property<bool>("InterviewCall");
-
-                    b.Property<bool>("InterviewEmail");
-
-                    b.Property<bool>("InterviewLetter");
 
                     b.Property<string>("InterviewNotes");
 
@@ -78,13 +66,7 @@ namespace Claymore.Migrations
 
                     b.Property<string>("Notes");
 
-                    b.Property<bool>("PhoneCall");
-
-                    b.Property<bool>("PhoneEmail");
-
                     b.Property<DateTime>("PhoneInterview");
-
-                    b.Property<bool>("PhoneLetter");
 
                     b.Property<string>("PhoneNotes");
 
@@ -92,15 +74,9 @@ namespace Claymore.Migrations
 
                     b.Property<string>("PositionTitle");
 
-                    b.Property<int>("PostingCount");
-
                     b.Property<string>("RecruiterName");
 
-                    b.Property<bool>("ScreenCall");
-
                     b.Property<bool>("ScreenEmail");
-
-                    b.Property<bool>("ScreenLetter");
 
                     b.Property<string>("ScreenNotes");
 

@@ -122,12 +122,22 @@ namespace Claymore.Controllers
             User user = _context.Users.Where(u => u.Id == (HttpContext.Session.GetInt32("UserId"))).FirstOrDefault();
             ViewBag.user= user;
     
-            List<PostingEvent> DateBasedAllPostings= _context.Postings.ToList().OrderBy(a =>a.DateApply).ToList();
+            List<PostingEvent> DateBasedAllPostings= _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList();
             List<PostingEvent> Regular=_context.Postings.ToList().OrderBy(a => a.DateApply).ToList();
+            ViewBag.AA = DateBasedAllPostings;
+            
+            int JobCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList().Count();
+            ViewBag.JobCount = JobCount;
+
+            //INSERT LAST JOB APPLIED HERE
+            var LastApplied = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList().Last().DateApply;
+            ViewBag.LastApplied = LastApplied;
+            
+            //INSERT ALL FOLLOW-UPS FOR FALSE HERE
+
 
             
-            ViewBag.AA = DateBasedAllPostings;
-           
+            //end of home, return view
             return View();
         }
 
@@ -274,6 +284,19 @@ namespace Claymore.Controllers
             PostToUpdate.PhoneNotes = UpdatedPost.PhoneNotes;
             PostToUpdate.Denied = UpdatedPost.Denied;
             PostToUpdate.DeniedNotes = UpdatedPost.DeniedNotes;
+            PostToUpdate.ScreenEmail = UpdatedPost.ScreenEmail;
+            PostToUpdate.ScreenLetter = UpdatedPost.ScreenLetter;
+            PostToUpdate.ScreenCall = UpdatedPost.ScreenCall;
+            PostToUpdate.PhoneEmail = UpdatedPost.PhoneEmail;
+            PostToUpdate.PhoneLetter = UpdatedPost.PhoneLetter;
+            PostToUpdate.PhoneCall = UpdatedPost.PhoneCall;
+            PostToUpdate.InterviewEmail = UpdatedPost.InterviewEmail;
+            PostToUpdate.InterviewLetter = UpdatedPost.InterviewLetter;
+            PostToUpdate.InterviewCall = UpdatedPost.InterviewCall;
+            PostToUpdate.DeniedEmail = UpdatedPost.DeniedEmail;
+            PostToUpdate.DeniedLetter = UpdatedPost.DeniedLetter;
+            PostToUpdate.DeniedCall = UpdatedPost.DeniedCall;
+            PostToUpdate.ConfirmationEmail = UpdatedPost.ConfirmationEmail;
 
             PostToUpdate.UpdatedAt = DateTime.Now;
             _context.SaveChanges();
