@@ -6,7 +6,12 @@
     <h5>Welcome, @ViewBag.user.FirstName</h5>
     <!-- <p><br></p> -->
 </div>
-<p class="card-text"><b class="posting_title">Total Jobs Applied To: </b> @ViewBag.JobCount </p>
+<button type="button" class="btn btn-dark">
+  Total Jobs Applied   <span class="badge badge-light">@ViewBag.JobCount</span>
+  <span class="sr-only">unread messages</span>
+</button>
+<p><br></p>
+
 <!--BEGIN STATS AREA-->
 <!--FUTURE-->   
 <!-- <div class="row">
@@ -66,7 +71,7 @@
           foreach (var posting in @ViewBag.AA)
           {
               <tr>
-                <td class="table-success"> @posting.DateApply.ToString("MM/dd") </td>
+                <td class="table-info"> @posting.DateApply.ToString("MM/dd") </td>
                 <td> <a href= "/posting/@posting.PostingId">@posting.Company</a></td>
                 <td>@posting.PositionTitle</td>
                 <td>@if (posting.PhoneScreen == Convert.ToDateTime("0001-01-01 00:00:00.000000"))

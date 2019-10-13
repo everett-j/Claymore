@@ -9,8 +9,8 @@
 <!--BEGIN of CARD ROW-->
 <div class="row">
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Job Details</h5></div>
+    <div class="card text-black bg-light mb-3">
+    <div class="card-header"><h5 class="card-title text-white">Job Details</h5></div>
       <div class="card-body ">
         <p class="card-text"><b class="posting_title">Company:</b> @ViewBag.Posting.Company</p>
         <p class="card-text"><b class="posting_title">Date Applied:</b> @ViewBag.Posting.DateApply</p>
@@ -34,8 +34,8 @@
     </div>
   </div>
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-     <div class="card-header"><h5 class="card-title">Key Info</h5></div>
+    <div class="card text-black bg-light mb-3">
+     <div class="card-header"><h5 class=" text-white card-title">Key Info</h5></div>
       <div class="card-body ">
         <p class="card-text"><b class="posting_title">Position Title: </b>@ViewBag.posting.PositionTitle</p>
         <p class="card-text"><b class="posting_title">Recruiter Name:</b> @ViewBag.posting.RecruiterName</p>
@@ -50,8 +50,8 @@
 <!--BEGIN of CARD ROW 2-->
 <div class="row">
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Phone Screen</h5></div>
+    <div class="card text-black bg-light mb-3">
+    <div class="card-header"><h5 class="text-white card-title">Phone Screen</h5></div>
       <div class="card-body ">
       <!--BEGIN DATE CONTROL-->
       <p class="card-text"><b class="posting_title">Phone Screen: </b>@if (@ViewBag.posting.PhoneScreen == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
@@ -113,8 +113,8 @@
     </div>
   </div>
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-     <div class="card-header"><h5 class="card-title">Phone Interview</h5></div>
+    <div class="card text-black bg-light mb-3">
+     <div class="card-header"><h5 class="text-white card-title">Phone Interview</h5></div>
       <div class="card-body ">
       <!--BEGIN DATE CONTROL-->
       <p class="card-text"><b class="posting_title">Phone Interview: </b>@if (@ViewBag.posting.PhoneInterview == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
@@ -180,8 +180,8 @@
 <!--BEGIN of CARD ROW 3-->
 <div class="row">
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-    <div class="card-header"><h5 class="card-title">Interview Info</h5></div>
+    <div class="card text-black bg-light mb-3">
+    <div class="card-header"><h5 class="text-white card-title">Interview Info</h5></div>
       <div class="card-body ">
       <!--BEGIN DATE CONTROL-->
       <p class="card-text"><b class="posting_title">Interview: </b>@if (@ViewBag.posting.Interview == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
@@ -242,8 +242,8 @@
     </div>
   </div>
   <div class="col-sm-6 ">
-    <div class="card text-white bg-secondary mb-3">
-     <div class="card-header"><h5 class="card-title">Denied Info</h5></div>
+    <div class="card text-black bg-light mb-3">
+     <div class="card-header"><h5 class="text-white card-title">Denied Info</h5></div>
       <div class="card-body ">
       <!--BEGIN DATE CONTROL-->
       <p class="card-text"><b class="posting_title">Denied: </b>@if (@ViewBag.posting.Denied == Convert.ToDateTime("0001-01-01 00:00:00.000000"))

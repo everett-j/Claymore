@@ -14,11 +14,11 @@ a.navbar-brand {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+  font-size: 12px;
 }
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -102,10 +102,19 @@ body {
 
 .nav_gnome {
   width: 38px;
+  
 }
 
 .footer_title{
   font-family: 'Orbitron', sans-serif;
   font-size: 13px;
   color: #030303;
+}
+
+.navbar-tag{
+  font-size: 15px;
+}
+
+.bigboy-img{
+width: 150px;
 }
