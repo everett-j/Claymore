@@ -12,7 +12,7 @@ namespace Claymore.Models
         [Key]
         public int PostingId{get;set;}
 
-         [DisplayFormat(ApplyFormatInEditMode = true,DataFormatString = "{0:MM/dd/yyyy}")]
+        
         public DateTime DateApply {get;set;}
 
         
