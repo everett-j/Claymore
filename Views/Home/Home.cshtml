@@ -86,7 +86,7 @@
           foreach (var item in Model)
           {
               <tr>
-                <td class="table-info">@Html.DisplayFor(modelItem => item.DateApply) </td>
+                <td class="table-info">@Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.DateApply)) </td>
                 <td> <a href= "/posting/@item.PostingId">@Html.DisplayFor(modelItem => item.Company)</a></td>
                 <td>@Html.DisplayFor(modelItem => item.PositionTitle)</td>
                 <td>@if (item.PhoneScreen == Convert.ToDateTime("0001-01-01 00:00:00.000000"))
