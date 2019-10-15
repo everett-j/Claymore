@@ -11,7 +11,7 @@
     <div class="card-header"><h5 class="card-title text-white">Job Details</h5></div>
       <div class="card-body ">
         <p class="card-text"><b class="posting_title">Company:</b> @ViewBag.Posting.Company</p>
-        <p class="card-text"><b class="posting_title">Date Applied:</b> @ViewBag.Posting.DateApply</p>
+        <p class="card-text"><b class="posting_title">Date Applied:</b> @ViewBag.Posting.DateApply.ToString("MM/dd")</p>
         <p class="card-text"><b class="posting_title">Job Link:</b> <a style="color: black" href=" @ViewBag.posting.JobLink">@ViewBag.posting.JobLink</a></p>
         <p class="card-text"><b class="posting_title">Job Posting:</b> @ViewBag.posting.JobPosting</p>
        
