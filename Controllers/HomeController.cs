@@ -118,20 +118,54 @@ namespace Claymore.Controllers
                 }
             }
         }
+        //////////////////////HOME///////////////////////////
 
 [HttpGet("Home")]
-        public IActionResult Home()
+        public async Task<IActionResult> Home(string sortOrder, string searchString, string currentFilter)
         {
             ViewBag.Id = HttpContext.Session.GetInt32("UserId");
             int? UserId = HttpContext.Session.GetInt32("UserId");
             if(UserId == null){
                 return RedirectToAction("Index");
+    
             }
             List<PostingEvent> AllPostings =_context.Postings.Include(w=>w.Creator).Include(w=>w.Guests).ThenInclude(g => g.User).ToList();
         
 
             User user = _context.Users.Where(u => u.Id == (HttpContext.Session.GetInt32("UserId"))).FirstOrDefault();
             ViewBag.user= user;
+
+            ////////////////BEGIN NEW SORTING FUNC//////////////
+
+         
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            
+            ViewData["CurrentFilter"] = searchString;
+            var posting = from s in _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId")))
+                        select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                posting = posting.Where(s => s.Company.Contains(searchString)
+                               || s.PositionTitle.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    posting = posting.OrderByDescending(s => s.Company);
+                    break;
+                case "Date":
+                    posting = posting.OrderBy(s => s.DateApply);
+                    break;
+                case "date_desc":
+                    posting = posting.OrderByDescending(s => s.DateApply);
+                    break;
+                default:
+                    posting = posting.OrderBy(s => s.Company);
+                    break;
+            }
+            
+                    ////////////////END NEW SORTING FUNC/////////
     
             List<PostingEvent> DateBasedAllPostings= _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList();
             List<PostingEvent> Regular=_context.Postings.ToList().OrderBy(a => a.DateApply).ToList();
@@ -148,8 +182,9 @@ namespace Claymore.Controllers
 
             
             //end of home, return view
-            return View();
+            return View(await posting.AsNoTracking().ToListAsync());
         }
+/////////////////////////ADD POSTING/////////////////////////////////
 
     [HttpGet("AddPosting")]
         public IActionResult AddPosting()
