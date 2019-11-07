@@ -101,7 +101,7 @@ body {
 }
 
 .nav_gnome {
-  width: 38px;
+  width: 29px;
   
 }
 
@@ -121,4 +121,8 @@ width: 150px;
 
 .btn-action{
   margin: 2px;
+}
+
+.table-color{
+  background-color: #a7bdac;
 }

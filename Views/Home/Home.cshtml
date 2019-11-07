@@ -3,14 +3,36 @@
 
 
 <div id="nav">
+
      <p><br></p>
     <h5>Welcome, @ViewBag.user.FirstName</h5>
     <!-- <p><br></p> -->
 </div>
-<button type="button" class="btn btn-dark">
-  Total Jobs Applied   <span class="badge badge-light">@ViewBag.JobCount</span>
+<!--ALERT STATS-->
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  Jobs Applied: TOTAL  <span class="badge badge-light"> @ViewBag.JobCount</span>   &nbsp;|&nbsp;  Jobs Applied: TODAY  <span class="badge badge-light"> @ViewBag.TodayCount</span>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!--END ALERT STATS-->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <b> Heads Up! &nbsp;</b>&nbsp; Today's Phone Screens:  <span class="badge badge-light"> @ViewBag.ScreenCount</span>   &nbsp;|&nbsp;  Today's Phone Interviews:  <span class="badge badge-light"> @ViewBag.PhoneCount</span>  &nbsp;|&nbsp;  Today's Interviews:  <span class="badge badge-light"> @ViewBag.InterviewCount</span>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+<!-- <button type="button" class="btn btn-dark">
+  Jobs Applied: TOTAL  <span class="badge badge-light"> @ViewBag.JobCount</span> 
   <span class="sr-only">unread messages</span>
 </button>
+<p><br></p>
+<button type="button" class="btn btn-dark">
+  Jobs Applied: TODAY  <span class="badge badge-light"> @ViewBag.TodayCount</span>
+  <span class="sr-only">unread messages</span>
+</button> -->
 <p><br></p>
 <!--SEARCH AREA-->
 <div class="search-area float-right">
@@ -18,8 +40,8 @@
     <div class="form-actions no-color">
         <p>
             Search by Company or Position: <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
-            <input type="submit" value="Search" class="btn btn-outline-primary" /> |
-            <a asp-action="Home">Back to Full List</a>
+            <input type="submit" value="Search" class="btn btn-outline-primary" />  |
+            <a asp-action="Home"> Back to Full List</a>
         </p>
     </div>
 </form>
@@ -86,7 +108,7 @@
           foreach (var item in Model)
           {
               <tr>
-                <td class="table-info">@Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.DateApply)) </td>
+                <td class="table-info table-color">@Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.DateApply)) </td>
                 <td> <a href= "/posting/@item.PostingId">@Html.DisplayFor(modelItem => item.Company)</a></td>
                 <td>@Html.DisplayFor(modelItem => item.PositionTitle)</td>
                 <td>@if (item.PhoneScreen == Convert.ToDateTime("0001-01-01 00:00:00.000000"))

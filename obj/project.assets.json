@@ -12193,11 +12193,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jeverett/Desktop/Claymore/Claymore/Claymore.csproj",
+      "projectUniqueName": "/Users/jeverett/Desktop/Claymore play/Claymore/Claymore.csproj",
       "projectName": "Claymore",
-      "projectPath": "/Users/jeverett/Desktop/Claymore/Claymore/Claymore.csproj",
+      "projectPath": "/Users/jeverett/Desktop/Claymore play/Claymore/Claymore.csproj",
       "packagesPath": "/Users/jeverett/.nuget/packages/",
-      "outputPath": "/Users/jeverett/Desktop/Claymore/Claymore/obj/",
+      "outputPath": "/Users/jeverett/Desktop/Claymore play/Claymore/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -12252,10 +12252,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
