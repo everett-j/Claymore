@@ -31,3 +31,38 @@
 /Users/jeverett/Desktop/Claymore/Claymore/obj/Debug/netcoreapp2.2/Claymore.csproj.CopyComplete
 /Users/jeverett/Desktop/Claymore/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Home.g.cshtml.cs
 /Users/jeverett/Desktop/Claymore/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Edit.g.cshtml.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.deps.json
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.runtimeconfig.json
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.runtimeconfig.dev.json
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.dll
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.pdb
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.Views.dll
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Claymore.Views.pdb
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.csprojAssemblyReference.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.RazorAssemblyInfo.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.RazorAssemblyInfo.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.AssemblyInfoInputs.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.AssemblyInfo.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.TagHelpers.input.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.TagHelpers.output.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.RazorCoreGenerate.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.RazorTargetAssemblyInfo.cache
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.RazorTargetAssemblyInfo.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.Views.pdb
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.dll
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.pdb
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Claymore.csproj.CopyComplete
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/appsettings.Development.json
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/appsettings.json
+/Users/jeverett/Desktop/Claymore play/Claymore/bin/Debug/netcoreapp2.2/Properties/launchSettings.json
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/AddPosting.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Edit.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Home.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Home/Posting.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs
+/Users/jeverett/Desktop/Claymore play/Claymore/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs

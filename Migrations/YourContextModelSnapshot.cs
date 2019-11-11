@@ -92,8 +92,6 @@ namespace Claymore.Migrations
 
                     b.Property<string>("PositionTitle");
 
-                    b.Property<int>("PostingCount");
-
                     b.Property<string>("RecruiterName");
 
                     b.Property<bool>("ScreenCall");

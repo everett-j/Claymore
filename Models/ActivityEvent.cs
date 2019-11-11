@@ -28,6 +28,8 @@ namespace Claymore.Models
 
         public string Notes {get;set;}
 
+        // public string JobLocation {get;set;}
+
 
         public string RecruiterName {get;set;}
 

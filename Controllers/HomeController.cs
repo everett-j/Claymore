@@ -174,8 +174,23 @@ namespace Claymore.Controllers
             int JobCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))).ToList().Count();
             ViewBag.JobCount = JobCount;
 
-            //INSERT LAST JOB APPLIED HERE
-           
+            //JOBS APPLIED TODAY
+            int TodayCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))&& u.CreatedAt >= DateTime.Now.Date).ToList().Count();
+            ViewBag.TodayCount = TodayCount;      
+
+            //Phone Screen TODAY
+            int ScreenCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))&& u.PhoneScreen >= DateTime.Now.Date).ToList().Count();
+            ViewBag.ScreenCount = ScreenCount;  
+
+            //Phone Interview TODAY
+            int PhoneCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))&& u.PhoneInterview >= DateTime.Now.Date).ToList().Count();
+            ViewBag.PhoneCount = PhoneCount;      
+
+
+            //Interview TODAY
+            int InterviewCount = _context.Postings.Where(u => u.Creator.Id == (HttpContext.Session.GetInt32("UserId"))&& u.Interview >= DateTime.Now.Date).ToList().Count();
+            ViewBag.InterviewCount = InterviewCount; 
+
 
            //INSERT ALL FOLLOW-UPS FOR FALSE HERE
 
@@ -184,6 +199,8 @@ namespace Claymore.Controllers
             //end of home, return view
             return View(await posting.AsNoTracking().ToListAsync());
         }
+
+
 /////////////////////////ADD POSTING/////////////////////////////////
 
     [HttpGet("AddPosting")]
@@ -319,6 +336,7 @@ namespace Claymore.Controllers
             PostToUpdate.JobPosting = UpdatedPost.JobPosting;
             PostToUpdate.PositionTitle = UpdatedPost.PositionTitle;
             PostToUpdate.Notes = UpdatedPost.Notes;
+            // PostToUpdate.JobLocation = UpdatedPost.JobLocation;
             PostToUpdate.RecruiterName = UpdatedPost.RecruiterName;
             PostToUpdate.ContactName = UpdatedPost.ContactName;
             PostToUpdate.PhoneScreen = UpdatedPost.PhoneScreen;

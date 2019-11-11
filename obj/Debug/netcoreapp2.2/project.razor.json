@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/jeverett/Desktop/Claymore/Claymore/Claymore.csproj",
+  "FilePath": "/Users/jeverett/Desktop/Claymore play/Claymore/Claymore.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2956,33 +2956,18 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 800
+    "CSharpLanguageVersion": 703
   },
   "RootNamespace": "Claymore",
   "Documents": [
     {
-      "FilePath": "Views/Home/Posting.cshtml",
-      "TargetPath": "Views/Home/Posting.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Home/Edit.cshtml",
-      "TargetPath": "Views/Home/Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Shared/_CookieConsentPartial.cshtml",
-      "TargetPath": "Views/Shared/_CookieConsentPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/Home/Index.cshtml",
-      "TargetPath": "Views/Home/Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views/Home/Home.cshtml",
       "TargetPath": "Views/Home/Home.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Posting.cshtml",
+      "TargetPath": "Views/Home/Posting.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -2991,8 +2976,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/Shared/Error.cshtml",
-      "TargetPath": "Views/Shared/Error.cshtml",
+      "FilePath": "Views/Shared/_CookieConsentPartial.cshtml",
+      "TargetPath": "Views/Shared/_CookieConsentPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3006,8 +2991,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views/Home/Index.cshtml",
+      "TargetPath": "Views/Home/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/_ViewStart.cshtml",
       "TargetPath": "Views/_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Edit.cshtml",
+      "TargetPath": "Views/Home/Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Shared/Error.cshtml",
+      "TargetPath": "Views/Shared/Error.cshtml",
       "FileKind": "mvc"
     },
     {
